@@ -1,0 +1,26 @@
+{
+  "name": "mcp-hono-stateless",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy --port 4001",
+    "deploy:gateway": "wrangler deploy --config wrangler.unified.jsonc --port 4001",
+    "dev": "wrangler dev --port 4001",
+    "dev:gateway": "wrangler dev --config wrangler.unified.jsonc --port 4001",
+    "start": "wrangler dev --port 4001",
+    "start:gateway": "wrangler dev --config wrangler.unified.jsonc --port 4001",
+    "test:gateway": "./test-gateway.sh",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "typescript": "^5.5.2",
+    "wrangler": "^4.13.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "fetch-to-node": "^2.1.0",
+    "hono": "^4.7.7",
+    "zod": "^4.1.12"
+  }
+}
